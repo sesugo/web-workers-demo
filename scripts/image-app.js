@@ -45,7 +45,10 @@
 
     if (window.Worker) {
 	    const myWorker = new Worker("scripts/worker.js");
-        myWorker.postMessage({'imageData':imageData});
+        myWorker.postMessage({
+			'imageData':imageData,
+			'type':type
+		});
         console.log('Message posted to worker');
 
         myWorker.onmessage = function(e) {
