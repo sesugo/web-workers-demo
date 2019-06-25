@@ -54,7 +54,7 @@
         myWorker.onmessage = function(e) {
           imageData = e.data;
           console.log('Message received from worker');
-		  toggleButtonsAbledness();
+          toggleButtonsAbledness();
           return ctx.putImageData(imageData, 0, 0);
         }
     } else {
