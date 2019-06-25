@@ -44,7 +44,7 @@
     // receive messages from the web worker.
 
     if (window.Worker) {
-	    const myWorker = new Worker("worker.js");
+	    const myWorker = new Worker("scripts/worker.js");
         myWorker.postMessage(imageData);
         console.log('Message posted to worker');
 
