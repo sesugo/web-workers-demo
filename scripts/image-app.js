@@ -54,6 +54,8 @@
         myWorker.onmessage = function(e) {
           imageData = e.data;
           console.log('Message received from worker');
+		  toggleButtonsAbledness();
+          return ctx.putImageData(imageData, 0, 0);
         }
     } else {
       console.log('Your browser doesn\'t support web workers.')
@@ -72,9 +74,10 @@
       imageData.data[i * 4 + 2] = pixel[2];
       imageData.data[i * 4 + 3] = pixel[3];
     }
-    */
+
     toggleButtonsAbledness();
     return ctx.putImageData(imageData, 0, 0);
+    */
   };
 
   function revertImage() {
