@@ -48,7 +48,7 @@
         myWorker.postMessage({
           'imageData':imageData,
           'type':type
-		});
+        });
         console.log('Message posted to worker');
 
         myWorker.onmessage = function(e) {
